@@ -1,0 +1,49 @@
+T^3 - A 3-dimensional Tetris(tm) game
+version 04.12.20-beta
+
+Copyright (C) 2004-2005 Derek Hausauer
+slightlytwisted@users.sourceforge.net
+http://t-3.sourceforge.net
+
++-----------------------------------------------------------------------------+
+| T^3 version 04.12.20-beta
++-----------------------------------------------------------------------------+
+
+- added next piece orbiter
+- added ability to change playing field size (4, 6, 8, and the original 10)
+- added scoreboard "ticking"; moved scoreboard to bottom of screen
+- lowest surface color now changes color after surfaces are completed
+- fixed bug regarding completing alternating surfaces (it wouldn't work before)
+- modified default window width / height
+		      
++-----------------------------------------------------------------------------+
+| T^3 version 04.12.08-beta
++-----------------------------------------------------------------------------+
+
+- moved project onto the Eclipse platform
+- major code refactoring
+- adapted a "rainbow" color scheme for pieces and blocks
+- landed blocks belonging to the same surface are now drawn in the same color
+- playing field posts now indicate dead surfaces
+- "dead" surfaces are no longer drawn in different colors
+- starfield code has been updated; only a single pattern is used
+- added background falling pieces
+- updated scoreboard textures
+- updated surface removal animation
+- fullscreen mode is now default
+- tweaked animation speeds
+
++-----------------------------------------------------------------------------+
+| T^3 version 04.11.29-beta
++-----------------------------------------------------------------------------+
+
+- this is the first beta release of T^3; whereas the previous version provided
+  a rough prototype of the game controls and screen layout, this version is
+  a full implementation of the game design
+
++-----------------------------------------------------------------------------+
+| T^3 version 04.11.22-alpha
++-----------------------------------------------------------------------------+
+
+- a prototype of a 3-dimensional Tetris(tm) game, providing a feel for the game
+  controls and screen layout

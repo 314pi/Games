@@ -1,0 +1,1 @@
+This files and folders in this folder are used by the portable app and should not normally be modified.

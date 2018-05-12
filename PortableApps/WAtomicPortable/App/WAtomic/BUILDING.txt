@@ -1,0 +1,85 @@
+             HOW TO BUILD WATOMIC:
+
+(This note assumes you have a source distribution)
+
+-----------------------------------------------
+               REQUIRED  PACKAGES 
+-----------------------------------------------
+(REQUIRED)
+In order to compile and build you need to install 
+GLScene library (CVS version) and Synapse net 
+library .
+
+http://glscene.sourceforge.net (~2.8 Mb)
+http://www.ararat.cz/synapse/  (~500 Kb)
+
+(OPTIONAL)
+You can obtain a performance improvement using
+FastMM memory manager, installing it 
+
+http://fastmm.sourceforge.net  (~250 Kb)
+
+and uncommenting the first line of WAtomic.dpr
+in the uses section:
+
+[...]
+uses
+  //FastMM4,             <--uncomment this line
+  Forms,
+  main in 'main.pas' {MainForm},
+[...]
+
+
+
+-----------------------------------------------
+                CVS TOOLS
+-----------------------------------------------
+A nice CVS client for windows can be found here
+
+http://www.tortoisecvs.org/
+
+
+
+-----------------------------------------------
+                OPENGL RENDERING
+-----------------------------------------------
+If your video hardware is buggy you can try
+putting Mesa3d dll in the WAtomic working dir.;
+It will be slow (pure software rendering) but 
+should operate correctly.
+The Mesa3d web site is the following
+
+http://www.mesa3d.org/
+
+
+
+
+-----------------------------------------------
+                BUILDING WATOMIC:
+-----------------------------------------------
+1-Keep the dir structure of WAtomic distribution unmodified;
+2-Install GLScene and Synapse packages in the IDE;
+3-Update your lib path to reflect new packages addition;
+4-Go to the 'src' dir
+5-Compile 'images.res' with batch file 'compile_res.bat'
+6-Open WAtomic.dpr in the Delphi IDE and build WAtomic;
+7-'WAtomic.exe' will be built in the main distribution dir.
+
+
+
+
+-----------------------------------------------
+                 COMMON ISSUES
+-----------------------------------------------
+If something goes wrong try to check the following items:
+
+-Is the path correct ?
+-Have you updated your environment lib path to reflect GLScene and Synapse packages addition?
+-Did you have compile the 'images.res' file ?
+-Do you have conflicting names in your Delphi configuration?
+-Do you have an uncorrect GLScene installation ?
+-Do you have an old GLScene package (no CVS) wich causes problem with some item names (T[...]-->TGL[...] ?)
+
+If nothing seems to work then you can send me a mail to: 
+
+ironfede@users.sourceforge.net

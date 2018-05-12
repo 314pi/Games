@@ -1,0 +1,1 @@
+The IceBreaker icon is a based on icons by Crystal by Everaldo and created by John T. Haller of PortableApps.com.  It is released under the GPL as included in LICENSE.TXT in this directory.

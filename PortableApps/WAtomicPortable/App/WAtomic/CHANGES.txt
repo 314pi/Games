@@ -1,0 +1,170 @@
+---CHANGE LOG---
+
+-----
+1.2.3.(.257)
+-Bug fixed a little form geometry problem;
+
+-----
+1.2.3
+-Bug fixed a problem related to a resource leakage;
+    now, sliding level selector for a while doesn't produce EOutOfResources exception; 
+    take a look at field.pas to understand what the origin of this problem was.
+-Bug fixed a zombie pointer in highscr.pas
+-Changed "close application" hot key combination to standard Alt+F4;
+-Added bonus level "the 15-game";
+-'Info pages' completed;
+
+-----
+1.2.2
+-Bug fixed some levels (premature completion - see tracker);
+-Bug fixed a problem in highscr.pas that possibly delete records;
+-Bug fixed a problem in ApplyMover method;
+-Bug fixed a range check problem
+-Bug fixed a problem wich prevents update of level number label
+-Bug fixed a wrong atom ID association 
+-Added specification for a chemical type ('BROMO')
+-(Slightly) Lowered memory usage
+-Speed up application using 'wall' sprite proxies;
+
+-Code cleanup
+
+-----
+1.2.1
+-Bug fixed: Wrong path check;
+-Bug fixed: DefaultExt in Open/Save dialog;
+-Bug fixed: Record label not updated when opening a saved level;
+-Bug fixed: Level 60 no completion;
+-Bug fixed: Level 79 missing atom;
+-Atoms motion is now cpu speed independent (Thanks to Mehdi Farhadi )
+-Added reset function to restart current level (F2 key)
+-"Prevent frame skipping" checkbox added for slow machines
+ 
+-Code cleanup;
+
+-----
+1.2.0
+-Bug fixed at levels 19,20 (no level completion);
+-Bug fixed: Application AV if atom running during level change ;
+-Added 'resize window' function in settings window;
+
+TODO
+-Add molecule editor;
+-Add custom levels;
+
+-----------------------
+1.1.5 - dev [1.2.0 RC2]
+-Interface of GLHUDSprites has changed (no more "pickable") so a lot of work has been done 
+.to convert all actors to TGLSprite descendant. The coordinate system 
+.has changed and consequentely all movement functions had to be re-written.
+.New code was introduced to control approx errors in position.
+.Now WAtomic should be compatible with current GLSCene CVS version.
+
+TODO
+-Add molecule editor;
+-Add custom levels;
+
+-----------------------
+1.1.4 - dev [1.2.0 RC1]
+-Some estetical change;
+-High score computation changed;
+-Worked-around a form-size problem on some systems;
+-Changed the source code layout;exe file is builded into the root WAtomic dir;
+-Introduced a correct behaviour in multiuser environments (w2k-ntfs, wxp):
+.WAtomic now saves configuration files in ([HOMEPATH]/[APPDATA]/WAtomic/);
+
+TODO
+-Add molecule editor;
+-Add custom levels;
+-Correct a form size problem;
+
+------------
+1.1.3 - dev
+-'Get Info' button to obtain infos and curiosities on molecules involved in WAtomic;
+ -->implies the use of Synapse net library for http communication; 
+
+-Updated GLScene version 0.91A2
+ -->implies little changes in class names:
+ : TDummyCube --> TGlDummyCube
+ : THudSprite --> TGlHUDSprite 
+
+-Memory consumption reduced;
+
+TODO
+-Add molecule editor;
+-Add custom levels;
+
+-----------
+1.1.2 - dev
+-Corrected level 60 (Bug in KAtomic too ?);
+-Corrected the level number updating 
+
+TODO
+-Add 'information' page to levels;
+-Add molecule editor;
+
+-----------
+1.1.1 - dev
+-Corrected a bug in Victory-check algorithm that prevented level 83,84 completion;
+-Corrected level 19 (Bug in KAtomic too ?);
+-Corrected the wrong disposition of directories of the release;
+
+TODO
+-Add 'information' page to levels;
+-Add molecule editor;
+
+------------
+1.1.0 - dev
+-Incorporated 'Field' unit into main program
+.Scene creation now at runtime;
+.Removed WAtomic_Field package;
+.No more components to pre-install;
+-Added two levels from KAtomic 
+.(THANKS !!!! to all people working on Linux platform to enhance KAtomic);
+-Added sounds;
+-Reduced target molecule size;
+
+TODO
+-Add 'information' page to levels;
+-Add molecule editor;
+
+-----
+1.0.4
+-Added High Scores list
+-Changed WAtomic.dpk package name into WAtomic_Field.dpk
+
+-----
+1.0.3
+-First stable version;
+-Added comments to sourcecode;
+-Source revision;
+-Fixed the -wrong- possibility to change selected atoms during moves; 
+
+TODO
+-Adding "High Scores"
+
+-------------
+1.0.2. - BETA
+-Added save/load level support;
+-Fixed anchors when maximizing;
+-Fixed some estetic bug;
+
+TODO
+-Enanching level selection;
+
+---------------
+1.0.1.31 - BETA
+-Fixed temporization of victory notification;
+-Fixed an AV when changing level from water (dangling pointer...);
+-Added full keyboard navigation (Space + Arrows buttons);
+-Code cleaned up;
+-Enanched level selection;
+
+----------------
+1.0.0.10 - ALPHA
+-Fixed the -wrong- possibility to change direction of atoms during moves;
+-Added .ico file;
+-Improved a little the main unit;
+
+----------------
+1.0.0.3 - ALPHA:
+-Fixed end-level logic.
